@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en" data-base="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Game – RAKA'8</title>
+<meta name="description" content="Pixel Dash: a tiny runner game where you switch between Developer and Creative mode.">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/mozilla-headline.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pixelify-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/shell.css">
+<link rel="stylesheet" href="assets/css/game.css">
+</head>
+<body class="projects-page game-page">
+<div class="projects-frame">
+  <div class="projects-shell">
+    <aside class="projects-sidebar">
+      <a class="projects-logo" href="index.html" aria-label="RAKA'8 home" data-logo></a>
+      <nav class="projects-nav" aria-label="Main">
+        <a class="projects-nav-link" href="projects.html"><span class="projects-nav-arrow"></span>Projects</a>
+        <a class="projects-nav-link is-current" href="game.html" aria-current="page"><span class="projects-nav-arrow"></span>Game</a>
+        <a class="projects-nav-link" href="#contact" data-popup-open="contact"><span class="projects-nav-arrow"></span>Contact</a>
+      </nav>
+      <nav class="projects-nav projects-socials" aria-label="Social">
+        <a class="projects-nav-link" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="projects-nav-arrow"></span>LinkedIn</a>
+        <a class="projects-nav-link" href="https://www.instagram.com/" target="_blank" rel="noopener"><span class="projects-nav-arrow"></span>Instagram</a>
+      </nav>
+    </aside>
+
+    <div class="projects-main game-main-col">
+      <div class="projects-top">
+        <a class="btn btn-lg btn-primary projects-creative" href="index.html" data-goto-mode="creative">Creative website</a>
+      </div>
+
+      <section id="game">
+        <div id="game-main">
+          <div id="game-hud">
+            <span><span class="hud-k">MODE</span><span id="hud-mode" class="hud-v">Developer</span></span>
+            <span><span class="hud-k">SWITCH</span><span id="hud-switch" class="hud-v">Ready</span></span>
+            <span><span class="hud-k">DEV</span><span id="hud-dev" class="hud-v hud-pips"><i></i><i></i><i></i></span></span>
+            <span><span class="hud-k">CREATIVE</span><span id="hud-creative" class="hud-v hud-pips"><i></i><i></i><i></i></span></span>
+            <span><span class="hud-k">POWER</span><span id="hud-cd" class="hud-v">Ready</span></span>
+            <span id="hud-score" class="hud-v">Score 0</span>
+          </div>
+          <div id="game-canvas-wrap">
+            <canvas id="gameCanvas" aria-label="Pixel Dash game. Press Space to jump, S to switch mode, D and C for powers." role="img" tabindex="0"></canvas>
+            <div id="game-tip" hidden></div>
+          </div>
+          <ul id="game-keys">
+            <li><kbd>Space</kbd><span>Jump</span></li>
+            <li><kbd>S</kbd><span>Switch mode</span></li>
+            <li><kbd>D</kbd><span>Dev power</span></li>
+            <li><kbd>C</kbd><span>Creative power</span></li>
+          </ul>
+          <div id="game-controls">
+            <button type="button" class="game-key" data-act="jump">Jump</button>
+            <button type="button" class="game-key" data-act="switch">Switch</button>
+            <button type="button" class="game-key" data-act="power">Power</button>
+          </div>
+        </div>
+        <aside id="leaderboard" aria-labelledby="lb-title">
+          <h2 id="lb-title" class="leaderboard-title">TOP SCORES</h2>
+          <div class="leaderboard-body">
+            <ol id="leaderboard-list"></ol>
+            <div class="lb-bar"></div>
+          </div>
+        </aside>
+      </section>
+
+      <footer class="projects-footer game-footer">
+        <span>©RAKA8 2026</span>
+        <span class="game-toggles">
+          <button type="button" class="tutorial-toggle" data-sound-toggle aria-pressed="false"><span class="tutorial-label">SOUND</span><span class="tutorial-state">OFF</span></button>
+          <button type="button" class="tutorial-toggle is-on" id="tutorial-toggle" aria-pressed="true"><span class="tutorial-label">TUTORIAL</span><span class="tutorial-state">ON</span></button>
+        </span>
+      </footer>
+    </div>
+  </div>
+</div>
+
+<div id="scoreModal" hidden role="dialog" aria-modal="true" aria-labelledby="score-heading">
+  <div class="cm-backdrop" data-score-close></div>
+  <div id="score-modal-box" class="cm-window">
+    <div class="cm-titlebar"><div class="cm-title">SAVE_SCORE.EXE</div><button type="button" class="cm-close" data-score-close aria-label="Close"></button></div>
+    <div class="cm-body">
+      <div class="cm-scroll">
+        <h3 id="score-heading" class="cm-heading">Save your score</h3>
+        <p class="score-big">Score <b id="final-score">0</b></p>
+        <form id="score-form" class="cm-form" novalidate>
+          <div class="cm-group"><label class="cm-label" for="nickname">Nickname</label><input class="cm-input" id="nickname" maxlength="12" autocomplete="nickname" placeholder="Up to 12 characters *" required></div>
+          <div class="form-status" role="status" hidden></div>
+          <div class="cm-actions score-actions"><button type="button" class="btn btn-light" data-score-close>Skip</button><button type="submit" class="cm-submit"><span class="cm-submit-text">Submit</span><span class="cm-spin"></span></button></div>
+          <p class="score-note">Scores are saved in this browser only. Want your name on the real board? Email <b><a href="mailto:hello@raka8.dev">hello@raka8.dev</a></b></p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/game.js"></script>
+</body>
+</html>

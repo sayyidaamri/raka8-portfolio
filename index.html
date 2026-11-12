@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" data-base="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>RAKA'8 – Designer &amp; Developer</title>
+<meta name="description" content="Raka Pratama designs and builds playful, pixel-sharp websites where design and code meet.">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/mozilla-headline.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pixelify-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/home.css">
+<script>try{if(sessionStorage.getItem("raka8:seen"))document.documentElement.classList.add("no-loader")}catch(e){}</script>
+</head>
+<body class="home">
+<div id="loader" aria-hidden="true"><div class="loader-icons"></div></div>
+
+<header id="site-header">
+  <a id="site-logo" href="index.html" aria-label="RAKA'8 home" data-logo></a>
+</header>
+
+<nav id="section-nav" aria-label="Sections">
+  <ol class="section-nav-list">
+    <li><a class="section-nav-food" href="#hero" data-section="hero" title="Home" aria-label="Home"></a></li>
+    <li><a class="section-nav-food" href="#about" data-section="about" title="Maker" aria-label="Maker"></a></li>
+    <li><a class="section-nav-food" href="#pixels" data-section="pixels" title="Pixels" aria-label="Pixels"></a></li>
+    <li><a class="section-nav-food" href="#ideas" data-section="ideas" title="Ideas" aria-label="Ideas"></a></li>
+    <li><a class="section-nav-food" href="#brain" data-section="brain" title="Brain" aria-label="Brain"></a></li>
+    <li><a class="section-nav-food" href="#dna" data-section="dna" title="DNA" aria-label="DNA"></a></li>
+    <li><a class="section-nav-food" href="#emotion" data-section="emotion" title="Emotion" aria-label="Emotion"></a></li>
+    <li><a class="section-nav-food" href="#beauty" data-section="beauty" title="Beauty" aria-label="Beauty"></a></li>
+    <li><a class="section-nav-food" href="#hands" data-section="hands" title="Hands" aria-label="Hands"></a></li>
+    <li><a class="section-nav-food" href="#windows" data-section="windows" title="Windows" aria-label="Windows"></a></li>
+    <li><a class="section-nav-food" href="#tetris" data-section="tetris" title="Stack" aria-label="Stack"></a></li>
+    <li><a class="section-nav-food" href="#world" data-section="world" title="World" aria-label="World"></a></li>
+  </ol>
+  <button type="button" class="section-nav-chomper" aria-label="Next section (back to top at the end)"></button>
+</nav>
+
+<div id="home-dock">
+  <button type="button" class="dock-btn" id="home-sound" data-sound-toggle aria-pressed="false" aria-label="Sound on/off"><span data-sound-icon></span></button>
+  <a class="dock-btn" id="home-phone" href="#contact" data-popup-open="contact" aria-label="Contact me" title="Contact"><span class="dock-ic" data-icon="phone"></span><span class="phone-waves" aria-hidden="true"><i></i><i></i></span></a>
+  <a class="dock-btn" href="game.html" aria-label="Play the game" title="Game"><span class="dock-ic" data-icon="pad"></span></a>
+  <a class="dock-btn" href="projects.html" aria-label="Projects" title="Projects"><span class="dock-ic" data-icon="folder"></span></a>
+</div>
+
+<main id="main-content">
+
+  <!-- HERO -->
+  <section id="hero" class="section">
+    <div id="hero-inner">
+      <div id="hero-avatar-wrap">
+        <div id="hero-bubble" class="box-pixel"><div id="hero-greeting" class="display-sm"><span class="greet-text">Hello</span><span class="greeting-cursor">|</span></div><span class="bubble-tail" aria-hidden="true"></span></div>
+        <div id="hero-avatar" aria-label="Pixel portrait of Raka" role="img"></div>
+      </div>
+      <div id="hero-copy">
+        <h1 id="hero-title" class="heading display-lg" data-scramble="manual">Shaping Pixels into Unforgettable Web Moments.</h1>
+        <p id="hero-lead" class="copy" data-scramble="manual">Clean code and careful design,<br>building ideas into living products since 2012.</p>
+        <div id="hero-modes" role="radiogroup" aria-label="Site mode">
+          <button type="button" class="selection-button is-active" data-mode="dev" role="radio" aria-checked="true"><span class="selection-arrow"></span><span class="selection-text" data-scramble="manual">Developer Mode</span></button>
+          <button type="button" class="selection-button" data-mode="creative" role="radio" aria-checked="false"><span class="selection-arrow"></span><span class="selection-text" data-scramble="manual">Creative Mode</span></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <div id="about-inner">
+      <h2 id="about-title" class="heading display-md text-center" data-scramble>The Maker Behind the<br>Logic and Pixels.</h2>
+      <p id="about-mode-text" class="copy text-center" data-scramble>I’m a developer who writes tidy code, ships with intent, and obsesses over structure, motion, and real-world speed on every device.</p>
+      <div id="about-card">
+        <div id="about-stats"><div id="about-level" data-scramble>LVL. 28</div><div id="about-hearts"></div></div>
+        <div id="about-character">
+          <button type="button" class="mode-arrow mode-arrow-prev" aria-label="Previous mode"></button>
+          <div class="character-wrapper"><div id="character-mode"></div></div>
+          <button type="button" class="mode-arrow mode-arrow-next" aria-label="Next mode"></button>
+        </div>
+        <div id="about-actions">
+          <div id="about-mode-box" class="box-pixel"><div id="about-mode-title">Developer Mode</div></div>
+          <a id="about-play" class="btn btn-lg btn-primary box-pixel" href="game.html">Play</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIXELS -->
+  <section id="pixels" class="section pin-1">
+    <div class="sticky" id="pixels-sticky">
+      <canvas id="pixels-canvas" aria-hidden="true"></canvas>
+      <h2 class="heading display-md text-center" data-scramble="manual">Everything begins<br>with a pixel.</h2>
+      <div id="pixels-dot" class="beating" aria-hidden="true"></div>
+      <p class="copy text-center pin-lead" data-scramble="manual">Each one set down on purpose.<br>I craft pixel-sharp stories for the web.</p>
+    </div>
+  </section>
+
+  <!-- IDEAS -->
+  <section id="ideas" class="section pin-1">
+    <div class="sticky" id="ideas-sticky">
+      <canvas id="ideas-canvas" aria-hidden="true"></canvas>
+      <div id="ideas-copy">
+        <h2 class="heading display-md" data-scramble="manual">This is where<br>ideas get their form.</h2>
+        <p class="copy" data-scramble="manual">Where it all sparks. The mind sketches the plan. Every function, every layout choice, it all begins up here.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRAIN -->
+  <section id="brain" class="section pin-2">
+    <div class="sticky" id="brain-sticky">
+      <div id="brain-art" aria-hidden="true"><div class="brain-half brain-l"></div><div class="brain-half brain-r"></div></div>
+      <h2 id="brain-typing" class="display-2xl" aria-live="off"><span class="bt-text">Idea</span><span class="bt-cursor">|</span></h2>
+    </div>
+  </section>
+
+  <!-- DNA -->
+  <section id="dna" class="section pin-2">
+    <div class="sticky" id="dna-sticky">
+      <canvas id="dna-canvas" aria-hidden="true"></canvas>
+      <div id="dna-copy">
+        <h2 class="heading display-md" data-scramble="manual">From this code,<br>everything evolves…</h2>
+        <p class="copy" data-scramble="manual">Before the first commit, there’s something underneath. My DNA mixes curiosity, logic, empathy, and craft. It isn’t only what I make, it’s who I am.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- EMOTION -->
+  <section id="emotion" class="section pin-2">
+    <div class="sticky" id="emotion-sticky">
+      <h2 id="emotion-title" class="heading display-md" data-scramble="manual">Beyond simply<br>working.</h2>
+      <div id="cards" aria-hidden="true"><div class="card card-back"></div><div class="card card-mid"></div><div class="card card-front"></div></div>
+      <p id="emotion-lead" class="copy" data-scramble="manual">Good design makes people feel. I shape your idea with care and intent, building websites that genuinely resonate.</p>
+    </div>
+  </section>
+
+  <!-- BEAUTY -->
+  <section id="beauty" class="section pin-2">
+    <div class="sticky" id="beauty-sticky">
+      <h2 id="beauty-title" class="heading display-md text-center" data-scramble="manual">Function sets the rules,<br>but beauty wins.</h2>
+      <div id="beauty-glasses" aria-hidden="true"><div class="g-frame"></div><span class="g-eye g-eye-l"><i></i></span><span class="g-eye g-eye-r"><i></i></span></div>
+      <p class="copy text-center pin-lead" id="beauty-lead" data-scramble="manual">My eye notices, directs,<br>and finds balance in pixels.</p>
+    </div>
+  </section>
+
+  <!-- HANDS -->
+  <section id="hands" class="section pin-2">
+    <div class="sticky" id="hands-sticky">
+      <div id="hand-left" class="hand" aria-hidden="true"></div>
+      <div id="hand-right" class="hand" aria-hidden="true"></div>
+      <div id="hands-spark" aria-hidden="true"></div>
+      <div id="hands-title">
+        <h2 class="heading display-md" data-scramble="manual">Ideas mean little without hands to make them real.</h2>
+        <p class="copy" data-scramble="manual">Every project here is something<br>I’ve shaped and shipped myself.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WINDOWS -->
+  <section id="windows" class="section pin-1">
+    <div class="sticky" id="windows-desktop"></div>
+  </section>
+
+  <!-- TETRIS -->
+  <section id="tetris" class="section pin-2">
+    <div class="sticky" id="tetris-sticky">
+      <div id="tetris-board">
+        <div id="tetris-well" class="box-pixel"><canvas id="tetris-canvas" width="300" height="500" aria-hidden="true"></canvas><h3 id="tetris-perfect" class="heading" aria-hidden="true">Perfect<br>Fit!</h3></div>
+        <div id="tetris-next" class="box-pixel"><div class="tetris-next-label">Next</div><canvas id="tetris-next-canvas" width="80" height="420" aria-hidden="true"></canvas></div>
+      </div>
+      <div id="tetris-cta">
+        <div id="tetris-bubble" class="box-pixel"><p class="copy" data-scramble="manual">drop me a line today.</p><span class="bubble-tail" aria-hidden="true"></span></div>
+        <h2 class="heading display-md" data-scramble="manual">Stack your idea on top of mine.</h2>
+        <p class="copy" data-scramble="manual">Great ideas need sharp execution. Got something brewing? Let’s shape it into a web experience people remember.</p>
+        <div id="tetris-actions"><a href="#contact" data-popup-open="contact" class="btn btn-lg btn-primary" id="tetris-cta-button">Contact Me</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WORLD -->
+  <section id="world" class="section pin-world">
+    <div class="sticky" id="world-sticky">
+      <div id="world-text">
+        <h2 id="world-title" class="heading display-md" data-scramble="manual">Let’s craft your next launch, one pixel at a time.</h2>
+        <p id="world-lead" class="copy" data-scramble="manual">My work travels. Across devices, across borders, across languages. A pixel is tiny, but the world I build with it has no edges.</p>
+        <nav id="world-socials" aria-label="Social links">
+          <a class="selection-button world-social" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="selection-arrow"></span><span class="selection-text" data-scramble="manual">LinkedIn</span></a>
+          <a class="selection-button world-social" href="https://www.instagram.com/" target="_blank" rel="noopener"><span class="selection-arrow"></span><span class="selection-text" data-scramble="manual">Instagram</span></a>
+          <a class="selection-button world-social" href="mailto:hello@raka8.dev"><span class="selection-arrow"></span><span class="selection-text" data-scramble="manual">Send me an email</span></a>
+        </nav>
+      </div>
+      <div id="world-art"><canvas id="world-canvas" aria-label="Pixel globe" role="img"></canvas></div>
+      <footer id="home-footer">©RAKA8 2026</footer>
+    </div>
+  </section>
+</main>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

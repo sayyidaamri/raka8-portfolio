@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-base="">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects – RAKA'8</title>
+<meta name="description" content="Selected websites designed and developed by Raka Pratama.">
+<meta name="theme-color" content="#121212">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="assets/fonts/mozilla-headline.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/pixelify-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/base.css">
+<link rel="stylesheet" href="assets/css/shell.css">
+</head>
+<body class="projects-page">
+<div class="projects-frame">
+  <div class="projects-shell">
+    <aside class="projects-sidebar">
+      <div class="projects-intro">
+        <a class="projects-logo" href="index.html" aria-label="RAKA'8 home" data-logo></a>
+        <h1 class="projects-intro-name heading">Raka Pratama</h1>
+        <p class="projects-intro-role">Designer &amp; Developer</p>
+        <p class="projects-intro-body">I think a website should feel as bold as the idea behind it. Led by curiosity, I keep testing what happens where design and technology overlap.</p>
+      </div>
+      <nav class="projects-nav" aria-label="Main">
+        <a class="projects-nav-link is-current" href="projects.html" aria-current="page"><span class="projects-nav-arrow"></span>Projects</a>
+        <a class="projects-nav-link" href="game.html"><span class="projects-nav-arrow"></span>Game</a>
+        <a class="projects-nav-link" href="#contact" data-popup-open="contact"><span class="projects-nav-arrow"></span>Contact</a>
+      </nav>
+      <nav class="projects-nav projects-socials" aria-label="Social">
+        <a class="projects-nav-link" href="https://www.linkedin.com/" target="_blank" rel="noopener"><span class="projects-nav-arrow"></span>LinkedIn</a>
+        <a class="projects-nav-link" href="https://www.instagram.com/" target="_blank" rel="noopener"><span class="projects-nav-arrow"></span>Instagram</a>
+      </nav>
+    </aside>
+
+    <div class="projects-main">
+      <div class="projects-top">
+        <div class="projects-actions">
+          <button type="button" class="btn btn-primary projects-creative projects-claw-toggle" aria-pressed="false" aria-label="Switch to claw machine" title="Claw machine"><span class="claw-icon-machine" data-icon="claw"></span><span class="claw-icon-list" data-icon="list"></span></button>
+          <a class="btn btn-lg btn-primary projects-creative" href="index.html" data-goto-mode="creative">Creative website</a>
+        </div>
+      </div>
+
+      <section class="claw" hidden aria-label="Claw machine — pick a project">
+        <p class="claw-label">Pick a project</p>
+        <div class="claw-box">
+          <div class="claw-rail"></div>
+          <div class="claw-rope"></div>
+          <div class="claw-arm"></div>
+          <div class="claw-chute"></div>
+          <div class="claw-bin"><span>Project</span></div>
+          <div class="claw-pile"></div>
+        </div>
+        <div class="claw-controls">
+          <button type="button" class="game-key claw-btn" data-claw="left" aria-label="Move left"><span data-icon-flip></span></button>
+          <button type="button" class="game-key claw-btn claw-grab" data-claw="grab">Grab</button>
+          <button type="button" class="game-key claw-btn" data-claw="right" aria-label="Move right"><span data-icon-arrow></span></button>
+        </div>
+        <p class="claw-status visually-hidden" aria-live="polite"></p>
+      </section>
+
+      <div class="projects-scroll">
+        <div class="projects-list"></div>
+        <footer class="projects-footer">
+          <span>©RAKA8 2026</span>
+          <span class="nf-hint claw-hint"><kbd>←</kbd><kbd>→</kbd> Move <kbd>Space</kbd> Grab</span>
+          <span class="game-toggles"><button type="button" class="tutorial-toggle" data-sound-toggle aria-pressed="false"><span class="tutorial-label">SOUND</span><span class="tutorial-state">OFF</span></button></span>
+        </footer>
+      </div>
+      <div class="list-bar"></div>
+    </div>
+  </div>
+  <div class="projects-modes">
+    <button type="button" class="projects-mode is-active" aria-current="true">Developer</button>
+    <a class="projects-mode" href="index.html" data-goto-mode="creative">Creative</a>
+  </div>
+</div>
+
+<div class="gallery" hidden role="dialog" aria-modal="true" aria-label="Project gallery">
+  <div class="gallery-track"></div>
+  <div class="gallery-head">
+    <h2 class="gallery-title heading"></h2>
+    <p class="gallery-year"></p>
+    <dl class="gallery-details"><div><dt>Client</dt><dd class="g-client"></dd></div><div><dt>Company</dt><dd class="g-company"></dd></div></dl>
+    <ul class="gallery-roles"></ul>
+  </div>
+  <button type="button" class="gallery-arrow gallery-prev" aria-label="Previous project"></button>
+  <button type="button" class="gallery-arrow gallery-next" aria-label="Next project"></button>
+  <p class="gallery-count"></p>
+  <button type="button" class="gallery-close">Close</button>
+</div>
+
+<script src="assets/js/art.js"></script>
+<script src="assets/js/core.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/projects.js"></script>
+</body>
+</html>
