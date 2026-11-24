@@ -48,7 +48,6 @@ Game: Space lompat, S ganti mode, D/C power, tutorial on/off, sound on/off, game
 ## Verifikasi
 
 Tidak ada tooling otomatis di folder ini. Cek manual: buka `index.html`, `projects.html`, `game.html` di browser dan pastikan console bebas error, semua gambar/video/audio termuat, dan layout tidak overflow di lebar desktop (1440) maupun mobile (390).
-Skrip audit & perbandingan screenshot (Playwright) sebelumnya ada di `clone-kit/`, tetapi tidak lagi disertakan di folder ini.
 
 ## Kredit aset
 
